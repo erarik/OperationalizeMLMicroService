@@ -6,13 +6,14 @@
 # Step 1:
 # Create dockerpath
 # dockerpath=<your docker ID/path>
-dockerpath=erarik/udacityarik_log
+dockerpath=erarik/project5
+tag=project5
 
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
 docker login --username=erarik
-docker tag 69f33905f4b0 $dockerpath:firsttry
+docker tag $tag $dockerpath:latest
 
 # Step 3:
 # Push image to a docker repository

@@ -1,6 +1,14 @@
-C:\Users\aylin\Documents\aws\DevOps_Microservices\project-ml-microservice-kubernetes>kubectl port-forward deployment/my-project5 8001:80
+C:\Users\aylin>kubectl run my-project5 --image=%dockerpath% --port 8001
+kubectl run --generator=deployment/apps.v1 is DEPRECATED and will be removed in a future version. Use kubectl run --generator=run-pod/v1 or kubectl create instead.
+deployment.apps/my-project5 created
+
+C:\Users\aylin>kubectl port-forward %deployment% 8001:80
 Forwarding from 127.0.0.1:8001 -> 80
 Forwarding from [::1]:8001 -> 80
 Handling connection for 8001
-Handling connection for 8001
-Handling connection for 8001
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
+
